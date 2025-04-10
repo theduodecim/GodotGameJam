@@ -1,15 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6576ihx4otoa"]
-
-[ext_resource type="Script" uid="uid://cqyv1tyc0w2ic" path="res://scenes/prefab/clickable_object.gd" id="1_dc5ie"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yswno"]
+[gd_scene format=3 uid="uid://bs574yo7wexms"]
 
 [node name="ClickableSprite" type="Sprite2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-script = ExtResource("1_dc5ie")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(152, 87)
 
-[node name="Area2D" type="Area2D" parent="Sprite2D"]
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-shape = SubResource("RectangleShape2D_yswno")
+[node name="DialogBox" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="DialogBox"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

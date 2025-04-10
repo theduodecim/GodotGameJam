@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cepvddgwdopm5"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(577, 323)
+scale = Vector2(0.597917, 0.592593)
+
+[node name="Mushroom" type="TextureButton" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = 274.0
+offset_right = 803.0
+offset_bottom = 994.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+
+[node name="Book" type="TextureButton" parent="."]
+offset_left = 784.0
+offset_top = 2.0
+offset_right = 1504.0
+offset_bottom = 722.0
+scale = Vector2(0.5, 0.5)
+
+[node name="DialogBox" type="Panel" parent="."]
+visible = false
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 700.0
+offset_bottom = 200.0
+
+[node name="Label" type="Label" parent="DialogBox"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 590.0
+offset_bottom = 90.0
