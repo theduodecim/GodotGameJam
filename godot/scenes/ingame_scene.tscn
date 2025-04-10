@@ -1,15 +1,36 @@
-[gd_scene load_steps=6 format=3 uid="uid://cik30de5gaaah"]
+[gd_scene load_steps=11 format=3 uid="uid://cik30de5gaaah"]
 
-[ext_resource type="Script" path="res://scenes/ingame_scene.gd" id="1_objyc"]
+[ext_resource type="Script" uid="uid://c01dlyjatmfl2" path="res://scenes/ingame_scene.gd" id="1_objyc"]
 [ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="1_y6ebv"]
 [ext_resource type="Texture2D" uid="uid://dmelj2qgr8w7k" path="res://icon.svg" id="2_h1yxu"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="3_8o178"]
-[ext_resource type="Script" path="res://scenes/node_example.gd" id="3_a5686"]
+[ext_resource type="Script" uid="uid://do6r7yk20443e" path="res://scenes/node_example.gd" id="3_a5686"]
+[ext_resource type="Texture2D" uid="uid://c8yjdcjru5aec" path="res://assets/img/obj.jpg" id="6_gadrd"]
+[ext_resource type="Script" uid="uid://cqyv1tyc0w2ic" path="res://scenes/prefab/clickable_object.gd" id="7_5jhce"]
+[ext_resource type="PackedScene" uid="uid://c6576ihx4otoa" path="res://scenes/prefab/ClickableSprite.tscn" id="8_vus8m"]
+[ext_resource type="Texture2D" uid="uid://c5si2bxt2cpx3" path="res://assets/img/background.jpg" id="9_1sh3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jhce"]
+size = Vector2(132.653, 126.884)
 
 [node name="IngameScene" type="Node2D"]
 script = ExtResource("1_objyc")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 577.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_1sh3m")
+expand_mode = 1
+
 [node name="NodeExample" type="Sprite2D" parent="." groups=["Persist"]]
+position = Vector2(364, 220)
+scale = Vector2(0.84375, 0.804688)
 texture = ExtResource("2_h1yxu")
 script = ExtResource("3_a5686")
 
@@ -23,3 +44,22 @@ visible = false
 unique_name_in_owner = true
 process_mode = 2
 visible = false
+
+[node name="ClickableObject" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(140, 98)
+scale = Vector2(0.376923, 0.386179)
+texture = ExtResource("6_gadrd")
+script = ExtResource("7_5jhce")
+
+[node name="Area2D" type="Area2D" parent="ClickableObject"]
+position = Vector2(-5.30612, 2.58949)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject/Area2D"]
+position = Vector2(2.65306, -2.58951)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_5jhce")
+
+[node name="ClickableSprite" parent="." instance=ExtResource("8_vus8m")]
+position = Vector2(111, 65)
+texture = ExtResource("6_gadrd")

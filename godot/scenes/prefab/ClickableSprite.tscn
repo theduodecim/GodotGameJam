@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6576ihx4otoa"]
+
+[ext_resource type="Script" uid="uid://cqyv1tyc0w2ic" path="res://scenes/prefab/clickable_object.gd" id="1_dc5ie"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yswno"]
+
+[node name="ClickableSprite" type="Sprite2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+script = ExtResource("1_dc5ie")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("RectangleShape2D_yswno")
