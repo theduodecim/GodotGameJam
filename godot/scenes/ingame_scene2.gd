@@ -4,10 +4,16 @@ extends Node2D
 @onready var pause_overlay = %PauseOverlay
 @onready var dialog_box = $DialogBox
 @onready var dialog_label = $DialogBox/Label
-var scene2 = preload("res://scenes/ingame_scene2.tscn")
+var scene3 = preload("res://scenes/ingame_scene3.tscn")
 func _ready() -> void:
+	$Navegation1.pressed.connect(_on_navegation1_pressed)
+	$Book.pressed.connect(_on_book_pressed)
+	$Mushroom1.pressed.connect(_on_mushroom1_pressed)
+	$BookOpen.pressed.connect(_on_bookOpen_pressed)
+	$Animal1.pressed.connect(_on_animal_pressed)
 	fade_overlay.visible = true
-
+	dialog_label.text = "Por fin llegue al campamento pero parece que no hay nada, mejor busco alrededor…"
+	dialog_box.visible = true
 	if SaveGame.has_save():
 		SaveGame.load_game(get_tree())
 
@@ -32,24 +38,31 @@ func _on_ClickableObject_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("Clickable object clicked!")
 		
-
-func _on_mushroom_pressed():
-	#$Animal1.visible = true
-	dialog_label.text = "A glowing mushroom. It hums softly with magical energy."
-	dialog_box.visible = true
-	#$Mushroom.visible = false;
-
 func _on_book_pressed():
-	dialog_label.text = "An old, leather-bound book. Its pages whisper forgotten secrets."
+	dialog_label.text = "El bosque esta destinado a ser destruido la maldita corporación lo va a deforestar pero, La isla de los Césares donde los gigantes habitan pueden detener a (ilegible)"
 	dialog_box.visible = true
+	$BookOpen.visible = true
 	
-func _on_branch_pressed():
-	get_tree().change_scene_to_packed(scene2)
+func _on_bookOpen_pressed():
+	dialog_label.text = "
+	¡¿la isla de los gigantes?! ¡Sabia que existía y las personas a las que les contaba no me creían!
+	 ahh eso es lo que necesito si me lo entregas te lo cambio por este mapa, creo que será de mucha ayuda."
+	dialog_box.visible = true
+	$BookOpen.visible = false
+	$Animal1.visible = true
+	
+func _on_animal_pressed():
 	dialog_label.text = ""
 	dialog_box.visible = true
+	$Animal1.visible = false
+	$Navegation1.visible = true
 	
-func _on_animal1_pressed():
-	#$Branch.visible = true
-	dialog_label.text = "An old, leather-bound book. Its pages whisper forgotten secrets."
+	
+func _on_navegation1_pressed():
+	get_tree().change_scene_to_packed(scene3)
+	
+	
+func _on_mushroom1_pressed():
+	dialog_label.text = "Q-que esta ungh pasando, ugh que paso? la fogata! Esta prendida?"
 	dialog_box.visible = true
-	
+	$Book.visible = true

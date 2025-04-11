@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1xikix8254v2"]
+
+[ext_resource type="Script" uid="uid://b5gu6373wkqx7" path="res://scenes/ingame_scene3.gd" id="1_6npbc"]
+[ext_resource type="Texture2D" uid="uid://cpa2sbl33vby4" path="res://assets/img/escenario_hongos.png" id="2_6npbc"]
+[ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="3_q2vrv"]
+[ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_cntg4"]
+[ext_resource type="Texture2D" uid="uid://c12hxdb3krila" path="res://assets/img/Hongo_2.png" id="5_6npbc"]
+[ext_resource type="Texture2D" uid="uid://c8yjdcjru5aec" path="res://assets/img/obj.jpg" id="6_5qvlc"]
+
+[sub_resource type="Theme" id="Theme_gadrd"]
+
+[node name="IngameScene3" type="Node2D"]
+script = ExtResource("1_6npbc")
+
+[node name="background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 577.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6npbc")
+expand_mode = 1
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="FadeOverlay" parent="UI" instance=ExtResource("3_q2vrv")]
+unique_name_in_owner = true
+visible = false
+
+[node name="PauseOverlay" parent="UI" instance=ExtResource("4_cntg4")]
+unique_name_in_owner = true
+process_mode = 2
+visible = false
+
+[node name="DialogBox" type="Panel" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 203.0
+offset_top = 262.0
+offset_right = 403.0
+offset_bottom = 312.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="DialogBox"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 200.0
+offset_bottom = 50.0
+theme = SubResource("Theme_gadrd")
+theme_override_colors/font_color = Color(0.730036, 0.0649184, 0, 1)
+theme_override_font_sizes/font_size = 5
+autowrap_mode = 2
+
+[node name="Mushroom1" type="TextureButton" parent="."]
+offset_left = 540.0
+offset_top = 287.0
+offset_right = 1260.0
+offset_bottom = 1007.0
+scale = Vector2(0.03, 0.03)
+texture_normal = ExtResource("5_6npbc")
+
+[node name="Navegation1" type="TextureButton" parent="."]
+offset_left = 535.0
+offset_top = 2.0
+offset_right = 575.0
+offset_bottom = 42.0
+
+[node name="fragment1" type="TextureButton" parent="."]
+visible = false
+offset_left = 174.0
+offset_top = 141.0
+offset_right = 214.0
+offset_bottom = 181.0
+texture_normal = ExtResource("6_5qvlc")
+
+[node name="fragment2" type="TextureButton" parent="."]
+visible = false
+offset_left = 264.0
+offset_top = 137.0
+offset_right = 304.0
+offset_bottom = 177.0
+texture_normal = ExtResource("6_5qvlc")
+
+[node name="fragment3" type="TextureButton" parent="."]
+visible = false
+offset_left = 365.0
+offset_top = 138.0
+offset_right = 405.0
+offset_bottom = 178.0
+texture_normal = ExtResource("6_5qvlc")

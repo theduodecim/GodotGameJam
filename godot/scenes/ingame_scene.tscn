@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://cik30de5gaaah"]
+[gd_scene load_steps=10 format=3 uid="uid://cik30de5gaaah"]
 
 [ext_resource type="Script" uid="uid://c01dlyjatmfl2" path="res://scenes/ingame_scene.gd" id="1_objyc"]
 [ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="1_y6ebv"]
-[ext_resource type="Texture2D" uid="uid://dipufn6cl8m2f" path="res://assets/img/Escenario_Bosque.png" id="2_vus8m"]
+[ext_resource type="Texture2D" uid="uid://dlg44cuufvwas" path="res://assets/img/Escenario_Lago.png" id="2_vus8m"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="3_8o178"]
 [ext_resource type="Texture2D" uid="uid://dph51gxtx1l2s" path="res://assets/img/rama_demo.png" id="6_gadrd"]
 [ext_resource type="Texture2D" uid="uid://mb53rmq4mtj3" path="res://assets/img/Hongo_1.png" id="7_5jhce"]
 [ext_resource type="Texture2D" uid="uid://dkf621tx17dmn" path="res://assets/img/animal_demo.png" id="7_vus8m"]
+[ext_resource type="Script" uid="uid://b6r4t2qwk4qhx" path="res://scenes/inventory.gd" id="8_vus8m"]
 
 [sub_resource type="Theme" id="Theme_gadrd"]
 
@@ -17,9 +18,8 @@ script = ExtResource("1_objyc")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 3.0
 offset_right = 577.0
-offset_bottom = 325.0
+offset_bottom = 326.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_vus8m")
@@ -37,11 +37,11 @@ process_mode = 2
 visible = false
 
 [node name="Mushroom" type="TextureButton" parent="."]
-offset_left = 224.0
-offset_top = 80.0
-offset_right = 944.0
-offset_bottom = 800.0
-scale = Vector2(0.2, 0.2)
+offset_left = 422.0
+offset_top = 219.0
+offset_right = 1142.0
+offset_bottom = 939.0
+scale = Vector2(0.03, 0.03)
 texture_normal = ExtResource("7_5jhce")
 
 [node name="DialogBox" type="Panel" parent="."]
@@ -59,16 +59,15 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="DialogBox"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 590.0
-offset_bottom = 90.0
+offset_left = 4.0
+offset_right = 200.0
+offset_bottom = 46.0
 theme = SubResource("Theme_gadrd")
 theme_override_colors/font_color = Color(0.730036, 0.0649184, 0, 1)
 theme_override_font_sizes/font_size = 5
 autowrap_mode = 2
 
-[node name="Branch" type="TextureButton" parent="."]
+[node name="Navegator" type="TextureButton" parent="."]
 visible = false
 offset_left = 454.0
 offset_top = 4.0
@@ -85,3 +84,28 @@ offset_right = 1004.0
 offset_bottom = 650.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("7_vus8m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_top = 0.912
+anchor_right = 0.051
+anchor_bottom = 0.912
+offset_left = 1.0
+offset_top = -71.488
+offset_right = 170.624
+offset_bottom = 29.512
+grow_vertical = 0
+script = ExtResource("8_vus8m")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Inventory"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.396
+anchor_bottom = 0.579
+offset_left = 63.0
+offset_top = -4.996
+offset_right = 103.0
+offset_bottom = 13.521
+columns = 4
