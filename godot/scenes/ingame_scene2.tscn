@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=3 uid="uid://d32tg7c6auahn"]
+
+[ext_resource type="Texture2D" uid="uid://cpa2sbl33vby4" path="res://assets/img/escenario_hongos.png" id="2_0sd85"]
+[ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="3_d2jac"]
+[ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_kn6v1"]
+[ext_resource type="Texture2D" uid="uid://c8c3vqoltw3dg" path="res://assets/img/Libro.png" id="5_knlk5"]
+[ext_resource type="Texture2D" uid="uid://c12hxdb3krila" path="res://assets/img/Hongo_2.png" id="6_g1v0n"]
+[ext_resource type="Texture2D" uid="uid://mb53rmq4mtj3" path="res://assets/img/Hongo_1.png" id="6_qrcax"]
+[ext_resource type="Texture2D" uid="uid://cqr8ygk6dxprn" path="res://assets/img/Hongo_3.png" id="7_d2jac"]
+[ext_resource type="Script" uid="uid://c2hgpm0foa1tv" path="res://scenes/ingame_scene2.gd" id="9_kn6v1"]
+
+[sub_resource type="Theme" id="Theme_gadrd"]
+
+[node name="IngameScene2" type="Node2D"]
+script = ExtResource("9_kn6v1")
+
+[node name="background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 577.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0sd85")
+expand_mode = 1
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="FadeOverlay" parent="UI" instance=ExtResource("3_d2jac")]
+unique_name_in_owner = true
+visible = false
+
+[node name="PauseOverlay" parent="UI" instance=ExtResource("4_kn6v1")]
+unique_name_in_owner = true
+process_mode = 2
+visible = false
+
+[node name="DialogBox" type="Panel" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 192.0
+offset_top = 271.0
+offset_right = 392.0
+offset_bottom = 321.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="DialogBox"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 590.0
+offset_bottom = 90.0
+theme = SubResource("Theme_gadrd")
+theme_override_colors/font_color = Color(0.730036, 0.0649184, 0, 1)
+theme_override_font_sizes/font_size = 5
+autowrap_mode = 2
+
+[node name="Mushroom1" type="TextureButton" parent="."]
+offset_left = 79.0
+offset_top = 85.0
+offset_right = 799.0
+offset_bottom = 805.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("6_qrcax")
+
+[node name="Mushroom2" type="TextureButton" parent="."]
+offset_left = 200.0
+offset_top = 104.0
+offset_right = 920.0
+offset_bottom = 824.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("6_g1v0n")
+
+[node name="Mushroom3" type="TextureButton" parent="."]
+offset_left = 334.0
+offset_top = 76.0
+offset_right = 1054.0
+offset_bottom = 796.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("7_d2jac")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 179.0
+offset_top = 33.0
+offset_right = 899.0
+offset_bottom = 753.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("5_knlk5")

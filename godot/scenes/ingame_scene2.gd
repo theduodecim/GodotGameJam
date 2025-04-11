@@ -4,13 +4,8 @@ extends Node2D
 @onready var pause_overlay = %PauseOverlay
 @onready var dialog_box = $DialogBox
 @onready var dialog_label = $DialogBox/Label
-
 var scene2 = preload("res://scenes/ingame_scene2.tscn")
-
 func _ready() -> void:
-	$Animal1.pressed.connect(_on_animal1_pressed)
-	$Mushroom.pressed.connect(_on_mushroom_pressed)
-	$Branch.pressed.connect(_on_branch_pressed)
 	fade_overlay.visible = true
 
 	if SaveGame.has_save():
@@ -39,10 +34,10 @@ func _on_ClickableObject_input_event(viewport, event, shape_idx):
 		
 
 func _on_mushroom_pressed():
-	$Animal1.visible = true
+	#$Animal1.visible = true
 	dialog_label.text = "A glowing mushroom. It hums softly with magical energy."
 	dialog_box.visible = true
-	$Mushroom.visible = false;
+	#$Mushroom.visible = false;
 
 func _on_book_pressed():
 	dialog_label.text = "An old, leather-bound book. Its pages whisper forgotten secrets."
@@ -54,7 +49,7 @@ func _on_branch_pressed():
 	dialog_box.visible = true
 	
 func _on_animal1_pressed():
-	$Branch.visible = true
+	#$Branch.visible = true
 	dialog_label.text = "An old, leather-bound book. Its pages whisper forgotten secrets."
 	dialog_box.visible = true
 	
