@@ -44,7 +44,7 @@ func _on_mushroom_pressed():
 	dialog_box.visible = true
 	$Mushroom.visible = false
 	inventory.add_item($Mushroom.texture_normal) # Add to inventory
-
+	$Music.play()
 
 func _on_book_pressed():
 	dialog_label.text = "An old, leather-bound book. Its pages whisper forgotten secrets."
