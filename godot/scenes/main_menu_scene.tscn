@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="3_kf1us"]
 [ext_resource type="PackedScene" uid="uid://b4blrdjthcxnn" path="res://ui/components/game_logo.tscn" id="4_fnufg"]
 [ext_resource type="Texture2D" uid="uid://dlg44cuufvwas" path="res://assets/img/Escenario_Lago.png" id="4_wbyn4"]
-[ext_resource type="AudioStream" uid="uid://dlchk3c1baiy8" path="res://music/corgie-title.ogg" id="6_drnm6"]
+[ext_resource type="AudioStream" uid="uid://cwle7tjwwc66e" path="res://music/mus_placeholder.ogg" id="7_wbyn4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ikbh"]
 font_size = 8
@@ -89,6 +89,6 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_drnm6")
+stream = ExtResource("7_wbyn4")
 autoplay = true
 bus = &"Music"

@@ -30,7 +30,7 @@ window/stretch/aspect="keep_height"
 
 [gui]
 
-theme/custom="res://ui/theme.tres"
+theme/custom="uid://dgr27f54p3g6b"
 
 [input]
 

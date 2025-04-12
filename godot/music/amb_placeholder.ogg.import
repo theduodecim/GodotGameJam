@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/amb_placeholder.ogg-90f1896592030ff91822c3abe
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
