@@ -75,3 +75,4 @@ func _on_mushroom1_pressed():
 	dialog_box.visible = true
 	$Book.visible = true
 	$Mushroom1.visible = false
+	$Music.play()

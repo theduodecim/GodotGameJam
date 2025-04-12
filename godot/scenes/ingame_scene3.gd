@@ -57,6 +57,7 @@ func _on_mushroom1_pressed():
 	$fragment2.visible = true
 	$fragment3.visible = true
 	$Mushroom1.visible = false
+	$Music.play()
 
 func _on_fragment_pressed(fragment_name: String):
 	dialog_label.text = "Pedazos de una nota?, Parece que hay algo escrito tal vez si junto las 3 puedo descifrar algo"

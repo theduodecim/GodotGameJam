@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1xikix8254v2"]
+[gd_scene load_steps=11 format=3 uid="uid://c1xikix8254v2"]
 
 [ext_resource type="Script" uid="uid://b5gu6373wkqx7" path="res://scenes/ingame_scene3.gd" id="1_6npbc"]
 [ext_resource type="Texture2D" uid="uid://c46b40mxnr3a5" path="res://assets/Escenario_Ruinas.png" id="2_o3xhq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cear7sfme517g" path="res://assets/img/next.png" id="6_q2vrv"]
 [ext_resource type="Texture2D" uid="uid://bbo40dvypplyg" path="res://assets/img/trozos_de_papel.png" id="7_6npbc"]
 [ext_resource type="AudioStream" uid="uid://b4s1menn3ra40" path="res://music/amb_placeholder.ogg" id="7_o3xhq"]
+[ext_resource type="AudioStream" uid="uid://8q4i5vys2tfr" path="res://music/mus_placeholder_-003.ogg" id="10_q2vrv"]
 
 [node name="IngameScene3" type="Node2D"]
 script = ExtResource("1_6npbc")
@@ -119,3 +120,6 @@ stream = ExtResource("7_o3xhq")
 volume_db = -9.0
 autoplay = true
 bus = &"Sound"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_q2vrv")
