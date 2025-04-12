@@ -18,10 +18,13 @@ script = ExtResource("1_objyc")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 577.0
-offset_bottom = 326.0
+offset_left = -28.0
+offset_top = -20.0
+offset_right = 602.0
+offset_bottom = 342.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
 texture = ExtResource("2_vus8m")
 expand_mode = 1
 
@@ -37,10 +40,10 @@ process_mode = 2
 visible = false
 
 [node name="Mushroom" type="TextureButton" parent="."]
-offset_left = 422.0
-offset_top = 219.0
-offset_right = 1142.0
-offset_bottom = 939.0
+offset_left = 433.0
+offset_top = 228.0
+offset_right = 1153.0
+offset_bottom = 948.0
 scale = Vector2(0.03, 0.03)
 texture_normal = ExtResource("7_5jhce")
 
