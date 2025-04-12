@@ -6,7 +6,6 @@ extends Node2D
 @onready var dialog_label = $DialogBox/Label
 # Declare this array at the top of the script or as a class member
 var collected_fragments: Array = []
-var mainMenuScene = preload("res://scenes/boot/godot/godot_bootsplash_scene.tscn")
 func _ready() -> void:
 	$Navegation1.pressed.connect(_on_navegation1_pressed)
 	$Mushroom1.pressed.connect(_on_mushroom1_pressed)
@@ -45,7 +44,9 @@ func _on_ClickableObject_input_event(viewport, event, shape_idx):
 	
 	
 func _on_navegation1_pressed():
-	get_tree().change_scene_to_packed(mainMenuScene)
+	print("End Game")
+	get_tree().change_scene_to_file("res://scenes/main_menu_scene.tscn")
+	
 	
 	
 func _on_mushroom1_pressed():

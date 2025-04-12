@@ -283,10 +283,10 @@ process_mode = 2
 visible = false
 
 [node name="Mushroom" type="TextureButton" parent="."]
-offset_left = 433.0
-offset_top = 228.0
-offset_right = 1153.0
-offset_bottom = 948.0
+offset_left = 493.0
+offset_top = 180.0
+offset_right = 1213.0
+offset_bottom = 900.0
 scale = Vector2(0.03, 0.03)
 texture_normal = ExtResource("7_5jhce")
 
