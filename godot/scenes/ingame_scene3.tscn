@@ -86,6 +86,7 @@ scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("6_q2vrv")
 
 [node name="fragment1" type="TextureButton" parent="."]
+visible = false
 offset_left = 167.0
 offset_top = 107.0
 offset_right = 767.0
@@ -95,6 +96,7 @@ texture_normal = ExtResource("7_6npbc")
 flip_h = true
 
 [node name="fragment2" type="TextureButton" parent="."]
+visible = false
 offset_left = 431.0
 offset_top = -5.0
 offset_right = 1031.0
@@ -103,6 +105,7 @@ scale = Vector2(0.09, 0.09)
 texture_normal = ExtResource("7_6npbc")
 
 [node name="fragment3" type="TextureButton" parent="."]
+visible = false
 offset_left = 455.0
 offset_top = 203.0
 offset_right = 1055.0
