@@ -44,18 +44,21 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 203.0
-offset_top = 262.0
-offset_right = 403.0
-offset_bottom = 312.0
+offset_left = 133.0
+offset_top = 204.0
+offset_right = 405.0
+offset_bottom = 298.0
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(1.04, 1.12)
 
 [node name="Label" type="Label" parent="DialogBox"]
 layout_mode = 0
-offset_left = 2.0
-offset_right = 200.0
-offset_bottom = 50.0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 7
 autowrap_mode = 2
 
 [node name="Mushroom1" type="TextureButton" parent="."]

@@ -6,9 +6,9 @@ extends Node2D
 @onready var dialog_label = $DialogBox/Label
 # Declare this array at the top of the script or as a class member
 var collected_fragments: Array = []
-#var scene3 = preload("res://scenes/ingame_scene2.tscn")
+var mainMenuScene = preload("res://scenes/boot/godot/godot_bootsplash_scene.tscn")
 func _ready() -> void:
-	#$Navegation1.pressed.connect(_on_navegation1_pressed)
+	$Navegation1.pressed.connect(_on_navegation1_pressed)
 	$Mushroom1.pressed.connect(_on_mushroom1_pressed)
 	$fragment1.pressed.connect(Callable(self, "_on_fragment_pressed").bind("fragment1"))
 	$fragment2.pressed.connect(Callable(self, "_on_fragment_pressed").bind("fragment2"))
@@ -44,8 +44,8 @@ func _on_ClickableObject_input_event(viewport, event, shape_idx):
 
 	
 	
-#func _on_navegation1_pressed():
-	#get_tree().change_scene_to_packed(scene3)
+func _on_navegation1_pressed():
+	get_tree().change_scene_to_packed(mainMenuScene)
 	
 	
 func _on_mushroom1_pressed():
@@ -57,7 +57,7 @@ func _on_mushroom1_pressed():
 	$Mushroom1.visible = false
 
 func _on_fragment_pressed(fragment_name: String):
-	dialog_label.text = "Q-que esta ungh pasando, ugh que paso? la fogata! Esta prendida?"
+	dialog_label.text = "Pedazos de una nota?, Parece que hay algo escrito tal vez si junto las 3 puedo descifrar algo"
 	dialog_box.visible = true
 	if not collected_fragments.has(fragment_name):
 		collected_fragments.append(fragment_name)
@@ -70,5 +70,6 @@ func _on_fragment_pressed(fragment_name: String):
 		print("All fragments collected!")
 		dialog_label.text = "Para el que lea la nota debe de saber que lo agitadores no quieren cometer mal, solo están haciendo el trabajo que les fue asignado hace siglos, si se presenta la oportunidad de ayudarlos no importa con que deberías de hacer todo lo posible para serles de apoyo."
 		dialog_box.visible = true
+		$Navegation1.visible = true
 		# Optionally, do something once all are collected
 	

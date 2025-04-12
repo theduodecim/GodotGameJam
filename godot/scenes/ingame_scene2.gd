@@ -66,3 +66,4 @@ func _on_mushroom1_pressed():
 	dialog_label.text = "Q-que esta ungh pasando, ugh que paso? la fogata! Esta prendida?"
 	dialog_box.visible = true
 	$Book.visible = true
+	$Mushroom1.visible = false

@@ -42,10 +42,10 @@ visible = false
 
 [node name="Animal1" type="TextureButton" parent="."]
 visible = false
-offset_left = 24.0
-offset_top = 137.0
-offset_right = 1944.0
-offset_bottom = 1217.0
+offset_left = 14.0
+offset_top = 99.0
+offset_right = 1934.0
+offset_bottom = 1179.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("8_knlk5")
 
@@ -55,18 +55,21 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 203.0
-offset_top = 262.0
-offset_right = 403.0
-offset_bottom = 312.0
+offset_left = 118.0
+offset_top = 213.0
+offset_right = 318.0
+offset_bottom = 263.0
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(1.88904, 1.8654)
 
 [node name="Label" type="Label" parent="DialogBox"]
 layout_mode = 0
-offset_left = 2.0
-offset_right = 200.0
-offset_bottom = 50.0
+offset_left = 1.58811
+offset_top = -1.60823
+offset_right = 199.588
+offset_bottom = 48.3918
+theme_override_font_sizes/font_size = 7
 autowrap_mode = 2
 
 [node name="Mushroom1" type="TextureButton" parent="."]
@@ -89,9 +92,9 @@ texture_normal = ExtResource("5_knlk5")
 [node name="BookOpen" type="TextureButton" parent="."]
 visible = false
 offset_left = 120.0
-offset_top = 47.0
+offset_top = 4.0
 offset_right = 2040.0
-offset_bottom = 1127.0
+offset_bottom = 1084.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("7_g1v0n")
 

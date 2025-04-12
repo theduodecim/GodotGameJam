@@ -305,12 +305,13 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 192.0
-offset_top = 271.0
-offset_right = 392.0
-offset_bottom = 321.0
+offset_left = 99.0
+offset_top = 231.0
+offset_right = 299.0
+offset_bottom = 281.0
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(1.8, 1.68)
 
 [node name="Label" type="Label" parent="DialogBox"]
 layout_mode = 0
@@ -318,6 +319,7 @@ offset_left = 4.0
 offset_right = 200.0
 offset_bottom = 46.0
 theme = SubResource("Theme_gadrd")
+theme_override_font_sizes/font_size = 7
 autowrap_mode = 2
 
 [node name="Navegator" type="TextureButton" parent="."]
