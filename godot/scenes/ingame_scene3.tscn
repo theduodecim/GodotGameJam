@@ -1,15 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1xikix8254v2"]
+[gd_scene load_steps=10 format=3 uid="uid://c1xikix8254v2"]
 
 [ext_resource type="Script" uid="uid://b5gu6373wkqx7" path="res://scenes/ingame_scene3.gd" id="1_6npbc"]
 [ext_resource type="Texture2D" uid="uid://c46b40mxnr3a5" path="res://assets/Escenario_Ruinas.png" id="2_o3xhq"]
 [ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="3_q2vrv"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_cntg4"]
+[ext_resource type="Texture2D" uid="uid://hfi0221reo0u" path="res://assets/img/Nota_papel.png" id="5_2dp52"]
 [ext_resource type="Texture2D" uid="uid://c12hxdb3krila" path="res://assets/img/Hongo_2.png" id="5_6npbc"]
-[ext_resource type="Texture2D" uid="uid://mytlga7wjmyr" path="res://assets/img/frag1_ph.png" id="6_2dp52"]
 [ext_resource type="Texture2D" uid="uid://cear7sfme517g" path="res://assets/img/next.png" id="6_q2vrv"]
+[ext_resource type="Texture2D" uid="uid://bbo40dvypplyg" path="res://assets/img/trozos_de_papel.png" id="7_6npbc"]
 [ext_resource type="AudioStream" uid="uid://b4s1menn3ra40" path="res://music/amb_placeholder.ogg" id="7_o3xhq"]
-[ext_resource type="Texture2D" uid="uid://deu8b2urwboi8" path="res://assets/img/frag2_ph.png" id="7_q2vrv"]
-[ext_resource type="Texture2D" uid="uid://1ghwiksfeeq6" path="res://assets/img/frag3_ph.png" id="8_cntg4"]
 
 [node name="IngameScene3" type="Node2D"]
 script = ExtResource("1_6npbc")
@@ -38,6 +37,15 @@ unique_name_in_owner = true
 process_mode = 2
 visible = false
 
+[node name="paperComplete" type="TextureButton" parent="."]
+visible = false
+offset_left = 132.0
+offset_top = -2.0
+offset_right = 732.0
+offset_bottom = 598.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_2dp52")
+
 [node name="DialogBox" type="Panel" parent="."]
 anchors_preset = 6
 anchor_left = 1.0
@@ -58,7 +66,6 @@ offset_left = 4.0
 offset_top = 5.0
 offset_right = 263.0
 offset_bottom = 88.0
-theme_override_font_sizes/font_size = 7
 autowrap_mode = 2
 
 [node name="Mushroom1" type="TextureButton" parent="."]
@@ -71,39 +78,38 @@ texture_normal = ExtResource("5_6npbc")
 
 [node name="Navegation1" type="TextureButton" parent="."]
 visible = false
-offset_left = 535.0
-offset_top = 2.0
-offset_right = 575.0
-offset_bottom = 42.0
+offset_left = 506.0
+offset_top = 5.0
+offset_right = 826.0
+offset_bottom = 325.0
 scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("6_q2vrv")
 
 [node name="fragment1" type="TextureButton" parent="."]
-visible = false
-offset_left = 88.0
-offset_top = 184.0
-offset_right = 408.0
-offset_bottom = 504.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("6_2dp52")
+offset_left = 167.0
+offset_top = 107.0
+offset_right = 767.0
+offset_bottom = 707.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("7_6npbc")
+flip_h = true
 
 [node name="fragment2" type="TextureButton" parent="."]
-visible = false
-offset_left = 399.0
-offset_top = 214.0
-offset_right = 719.0
-offset_bottom = 534.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("7_q2vrv")
+offset_left = 431.0
+offset_top = -5.0
+offset_right = 1031.0
+offset_bottom = 595.0
+scale = Vector2(0.09, 0.09)
+texture_normal = ExtResource("7_6npbc")
 
 [node name="fragment3" type="TextureButton" parent="."]
-visible = false
-offset_left = 169.0
-offset_top = 199.0
-offset_right = 489.0
-offset_bottom = 519.0
-scale = Vector2(0.08, 0.08)
-texture_normal = ExtResource("8_cntg4")
+offset_left = 455.0
+offset_top = 203.0
+offset_right = 1055.0
+offset_bottom = 803.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("7_6npbc")
+flip_v = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_o3xhq")

@@ -41,18 +41,26 @@ func _on_ClickableObject_input_event(viewport, event, shape_idx):
 func _on_book_pressed():
 	dialog_label.text = "El bosque esta destinado a ser destruido la maldita corporación lo va a deforestar pero, La isla de los Césares donde los gigantes habitan pueden detener a (ilegible)"
 	dialog_box.visible = true
+	$Book.visible = false
 	$BookOpen.visible = true
 	
 func _on_bookOpen_pressed():
-	dialog_label.text = "
-	¡¿la isla de los gigantes?! ¡Sabia que existía y las personas a las que les contaba no me creían!
-	 ahh eso es lo que necesito si me lo entregas te lo cambio por este mapa, creo que será de mucha ayuda."
+	dialog_label.text = "¡¿la isla de los gigantes?! ¡Sabía que existía y las personas a las que les contaba no me creían!"
 	dialog_box.visible = true
 	$BookOpen.visible = false
+	dialog_box.visible = false
+	
+	# Delay here (2 seconds)
+	await get_tree().create_timer(2.0).timeout
+	
+	dialog_box.visible = true
 	$Animal1.visible = true
+	dialog_label.text = "ahh eso es lo que necesito si me lo entregas te lo cambio por este mapa, creo que será de mucha ayuda."
+
+	
 	
 func _on_animal_pressed():
-	dialog_label.text = ""
+	dialog_label.text = "Genial, ahora con este mapa puedo ir a la isla de los gigantes !"
 	dialog_box.visible = true
 	$Animal1.visible = false
 	$Navegation1.visible = true

@@ -13,6 +13,7 @@ func _ready() -> void:
 	$fragment2.pressed.connect(Callable(self, "_on_fragment_pressed").bind("fragment2"))
 	$fragment3.pressed.connect(Callable(self, "_on_fragment_pressed").bind("fragment3"))
 	
+	
 	fade_overlay.visible = true
 	dialog_label.text = "Llegue p-pero porque no hay nadie es como si estuviera abandonado"
 	dialog_box.visible = true
@@ -72,5 +73,6 @@ func _on_fragment_pressed(fragment_name: String):
 		dialog_label.text = "Para el que lea la nota debe de saber que lo agitadores no quieren cometer mal, solo están haciendo el trabajo que les fue asignado hace siglos, si se presenta la oportunidad de ayudarlos no importa con que deberías de hacer todo lo posible para serles de apoyo."
 		dialog_box.visible = true
 		$Navegation1.visible = true
+		$paperComplete.visible = true
 		# Optionally, do something once all are collected
 	

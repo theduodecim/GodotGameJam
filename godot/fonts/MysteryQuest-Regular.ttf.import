@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dqyq14vmwjksr"
-path="res://.godot/imported/DOODLE.ttf-01969f45d183a069db29f63c82b73fd2.fontdata"
+uid="uid://kpcbyw1k75sv"
+path="res://.godot/imported/MysteryQuest-Regular.ttf-fd465915480dded7f29c711fe9f5a32b.fontdata"
 
 [deps]
 
-source_file="res://assets/DOODLE.ttf"
-dest_files=["res://.godot/imported/DOODLE.ttf-01969f45d183a069db29f63c82b73fd2.fontdata"]
+source_file="res://fonts/MysteryQuest-Regular.ttf"
+dest_files=["res://.godot/imported/MysteryQuest-Regular.ttf-fd465915480dded7f29c711fe9f5a32b.fontdata"]
 
 [params]
 
